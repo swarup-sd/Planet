@@ -1,0 +1,585 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+    
+}
+.container {
+    font-size: 10px;
+    width: 50%;
+    height: 50vh;
+    position: relative;
+    
+}
+
+.sun {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: rgb(233, 180, 8);
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+.earth,.moon,.mars {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.earth {
+    top: 4em;
+    left: 4em;
+    width: 32em;
+    height: 32em; 
+    animation: orbit 36.5s linear infinite;   
+}
+.moon {
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em; 
+    animation: orbit 2.7s linear infinite;
+}
+.mars {
+    top: 11em;
+    left: 11em;
+    width: 18em;
+    height: 18em;
+    animation: orbit 68.7s linear infinite;
+}
+.earth::before,
+.moon::before,
+.mars::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;    
+}
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+.mars::before {
+    top: 1.5em;
+    right: 1.5em;
+    width: 2em;
+    height: 2em;
+    background-color: red;
+}
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+}
+.planet {
+    display: none;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+}
+.sun:hover::after,
+.earth:hover::after,
+.moon:hover::after,
+.mars:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    top: -1.5em; /* change bottom to top and adjust the value */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+.container2 {
+    font-size: 10px;
+    width: 10em;
+    top: 4em;
+    left: 10em;
+    height: 10vh;
+    position: absolute;
+    
+}
+.sun2 {
+    position: absolute;
+    top: 4em;
+    left: 4em;
+    width: 2em;
+    height: 2em;
+    background-color: rgb(129, 129, 129);
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+.earth2 {
+    position: absolute;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.earth2 {
+    top: 4em;
+    left: 4em;
+    width: 1rem;
+    height: 1em; 
+    animation: orbit2 36.5s linear infinite;   
+}
+
+.earth2::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.earth2::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(6, 115, 158);    
+}
+
+@keyframes orbit2 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.planet2 {
+    display: none;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+}
+.sun2:hover::after,
+.earth2:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    top: -1.5em; /* change bottom to top and adjust the value */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+.container3 {
+    font-size: 10px;
+    width: 10em;
+    top: 50em;
+    left: 60em;
+    height: 10vh;
+    position: absolute;
+    border: 1p solid red;
+    
+}
+.sun3 {
+    position: absolute;
+    top: 4em;
+    left: 4em;
+    width: 2em;
+    height: 2em;
+    background-color: rgb(0, 255, 55);
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+.earth3 {
+    position: absolute;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.earth3{
+    top: 4em;
+    left: 4em;
+    width: 1rem;
+    height: 1em; 
+    animation: orbit2 36.5s linear infinite;   
+}
+
+.earth3::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.earth3::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(165, 224, 224);    
+}
+
+
+@keyframes orbit2 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.planet3 {
+    display: none;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+}
+.sun3:hover::after,
+.earth3:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    top: -1.5em; /* change bottom to top and adjust the value */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+.container4 {
+    font-size: 10px;
+    top: 40em;
+    left: 7em;
+    width: 80%;
+    height: 80vh;
+    position: relative;
+
+    
+}
+
+.plt1 {
+    position: absolute;
+    top: 15em;
+    left: 30em;
+    width: 5em;
+    height: 5em;
+    background-color: rgb(109, 3, 3);
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+    
+}
+.plt2,.plt4 {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.plt2 {
+    top: 4em;
+    left: 1em;
+    width: 12em;
+    height: 12em; 
+    animation: orbit 8.7s linear infinite;
+}
+.plt3 {
+    top: 0;
+    right: 0;
+    width: 5em;
+    height: 5em; 
+}
+
+.plt2::before,
+.plt3::before,
+.plt4::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.plt2::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(233, 212, 29);    
+}
+.plt3::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 2em;
+    height: 2em;
+    background-color: rgb(95, 93, 95);
+}
+.plt4::before {
+    top: 1.5em;
+    right: 1.5em;
+    width: 1em;
+    height: 1em;
+    background-color: red;
+}
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.planet4 {
+    display: none;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+}
+.plt1:hover::after,
+.plt2:hover::after,
+.plt4:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    top: -1.5em; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container5 {
+    font-size: 10px;
+    width: 50%;
+    height: 50vh;
+    top: -33em;
+    left: 15em;
+    position: relative;
+    
+}
+
+.s1 {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: rgb(173, 172, 167);
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+.e1,.mo1,.sa1 {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.e1 {
+    top: 4em;
+    left: 4em;
+    width: 32em;
+    height: 32em; 
+    animation: orbit 36.5s linear infinite;   
+}
+.mo1 {
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em; 
+    animation: orbit 2.7s linear infinite;
+}
+.ma1 {
+    top: 0em;
+    left: 0em;
+    width: 45em;
+    height: 45em;
+    animation: orbit 30.7s linear infinite;
+}
+.sa1 {
+    top: 11em;
+    left: 11em;
+    width: 18em;
+    height: 18em;
+    animation: orbit 68.7s linear infinite;
+}
+.e1::before,
+.mo1::before,
+.ma1::before,
+.sa1::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.e1::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: rgb(103, 8, 255);    
+}
+.mo1::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: rgb(196, 8, 8);
+}
+.ma1::before {
+    top: 5.5em;
+    right: 5.5em;
+    width: 3em;
+    height: 3em;
+    background-color: rgb(141, 146, 4);
+}
+.sa1::before {
+    top: 1.5em;
+    right: 1.5em;
+    width: 2em;
+    height: 2em;
+    background-color: rgb(73, 121, 10);
+}
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+}
+.planet5 {
+    display: none;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+}
+.s1:hover::after,
+.e1:hover::after,
+.mo1:hover::after,
+.ma1:hover::after,
+.sa1:hover::after,
+.s1:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    top: -1.5em; /* change bottom to top and adjust the value */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+.container6 {
+    font-size: 10px;
+    width: 50%;
+    height: 50vh;
+    top: 23em;
+    left: -2em;
+    position: relative;
+    
+}
+
+.s2 {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: rgba(233, 172, 5, 0.795);
+    border-radius: 50%;
+    box-shadow: 0 0 3em rgb(245, 190, 9);
+}
+.ma2{
+    position: absolute;
+    border-style: solid;
+    border-color: rgb(202, 200, 200) transparent transparent transparent;
+    border-width: 0.2em 0.2em 0 0;
+    border-radius: 50%;
+}
+.ma2 {
+    top: 18em;
+    left: 6em;
+    width: 25em;
+    height: 5em;
+    animation: orbit 30.7s linear infinite;
+}
+.ma2::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.ma2::before {
+    top: 5.5em;
+    right: 5.5em;
+    width: 3em;
+    height: 3em;
+    background-color: rgb(141, 146, 4);
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.planet6 {
+    display: none;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+}
+.s2:hover::after,
+.ma2:hover::after{
+    content: attr(data-name);
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    top: -1.5em; /* change bottom to top and adjust the value */
+    left: 50%;
+    transform: translateX(-50%);
+}

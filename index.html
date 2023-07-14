@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+  <style>
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sun">
+      <div class="planet" data-name="Sun">Sun</div>
+    </div>
+    <div class="earth">
+      <div class="planet" data-name="Earth"></div>
+      <div class="moon">
+        <div class="planet" data-name="Moon">Moon</div>
+      </div>
+    </div>
+    <div class="mars">
+      <div class="planet" data-name="Mars">Mars</div>
+    </div>
+  </div>
+
+  <div class="container2">
+    <div class="sun2">
+      <div class="planet2" data-name="Sun">Sun</div>
+    </div>
+    <div class="earth2">
+      <div class="planet2" data-name="Earth"></div>
+     
+    </div>
+    <div class="mars2">
+      <div class="planet2" data-name="Mars">Mars</div>
+    </div>
+  </div>
+
+
+
+  <div class="container3">
+    <div class="sun3">
+      <div class="planet3" data-name="Sun">Sun</div>
+    </div>
+    <div class="earth3">
+    </div>
+    <div class="mars3">
+      <div class="planet" data-name="mars3">plt</div>
+    </div>
+  </div>
+
+
+  <div class="container4">
+    <div class="plt1">
+      <div class="planet4" data-name="Sun">Sun</div>
+    </div>
+    <div class="plt2">
+      <div class="planet4" data-name="Earth"></div>
+      <div class="plt3">
+        <div class="planet4" data-name="Moon">Moon</div>
+      </div>
+    </div>
+    <div class="plt4">
+      <div class="planet4" data-name="Mars">Mars</div>
+    </div>
+  </div>
+
+
+
+  <div class="container5">
+    <div class="s1">
+      <div class="planet5" data-name="s1">Sun</div>
+    </div>
+    <div class="e1">
+      <div class="planet5" data-name="e1"></div>
+      <div class="mo1">
+        <div class="planet5" data-name="mo1">Moon</div>
+      </div>
+    </div>
+    <div class="ma1">
+      <div class="planet5" data-name="ma1">Mars</div>
+    </div>
+    <div class="sa1">
+        <div class="planet5" data-name="sa1">Mars</div>
+      </div>
+  </div>
+
+
+  
+  <div class="container6">
+    <div class="s2">
+      <div class="planet6" data-name="s2">Sun</div>
+    </div>
+    <div class="ma2">
+      <div class="planet6" data-name="ma2">Mars</div>
+    </div>
+  </div>
+
+
+  <script>
+    function createStars() {
+      const body = document.querySelector('body');
+      for (let i = 0; i < 300; i++) 
+      { 
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = '1px';
+        star.style.height = '1px';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        body.appendChild(star);
+      }
+    }
+    createStars();
+  </script>
+</body>
+
+</html>
+
+<!--//--Inspired From a Short--//-->
